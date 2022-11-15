@@ -3,6 +3,7 @@
 //
 
 #include "single_link.h"
+#include "StaticLink.h"
 #include<iostream>
 using namespace std;
 
@@ -26,5 +27,19 @@ int main(){
     link.delete_value(49);
     link.show();
     cout<<"single_link_test END================"<<endl;
+
+    cout<<endl<<endl<<endl<<"static_link_test START================"<<endl;
+    static_link staticLink = static_link();
+    staticLink.show_static_link();
+    cout<<"init static link is completed!"<<endl;
+    staticLink.init_value();
+    cout<<"the static link after init is "<<endl;
+    staticLink.show_static_link();
+    staticLink.insert(10000);
+    int input;
+    cin>>input;
+    staticLink.delete_value(input);
+    cin>>input;
+    staticLink.delete_value(input);
     return 0;
 }
