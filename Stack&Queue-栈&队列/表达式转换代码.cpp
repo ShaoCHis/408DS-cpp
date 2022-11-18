@@ -158,6 +158,13 @@ string translate_front(string input) {
     return result;
 }
 
+/***
+ * 测试用例：
+ * a+b-a*((c+d)/e-f)+g
+ * translate back::ab+acd+e/f-*-g+
+ * translate front:+-+ab*a-/+cdefg
+ * @return
+ */
 int main() {
     string input = "";
     //cin输入流无法接受空格字符的输入，空格字符的输入将中断字符流的输入
